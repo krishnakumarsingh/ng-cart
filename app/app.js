@@ -7,8 +7,11 @@ import { HomeCtrl } from './templates/home/HomeCtrl';
 import { AboutCtrl } from './templates/about/AboutCtrl';
 import { ShopCtrl } from './templates/shop/ShopCtrl';
 import { CheckoutCtrl } from './templates/checkout/CheckoutCtrl';
+import { HeaderCtrl } from './templates/header/HeaderCtrl';
+import { FooterCtrl } from './templates/footer/FooterCtrl';
 
 import { HeaderDirective } from './directives/headerDir';
+import { DataService } from './services/DataService';
 
 angular.module('angularWebpack', [uirouter])
 	.config(Router)
@@ -16,4 +19,7 @@ angular.module('angularWebpack', [uirouter])
 	.controller('AboutCtrl', AboutCtrl)
 	.controller('ShopCtrl', ShopCtrl)
 	.controller('CheckoutCtrl', CheckoutCtrl)
-	.directive("headerDirective", () => new HeaderDirective);
+	.controller('HeaderCtrl', HeaderCtrl)
+	.controller('FooterCtrl', FooterCtrl)
+	.directive("headerDirective", () => new HeaderDirective)
+	.service('DataService', ['$http', () => new DataService]);

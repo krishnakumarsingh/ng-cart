@@ -1,7 +1,11 @@
+
 class HeaderCtrl {
-    constructor($state) {
+    constructor($state, $http, DataService) {
         this.$state = $state;
-        this.message = 'header';
+        this.message = "DataService.getFullName()";
+        this.data = ["Home", "Shop", "Cart", "Checkout"];
+        this.nav = DataService.getFullName();
+    	this.links = DataService.getFullName().links;
     }
 }
 

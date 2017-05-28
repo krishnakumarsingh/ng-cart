@@ -11,12 +11,12 @@ function Router($stateProvider, $urlRouterProvider) {
    $urlRouterProvider.otherwise("/");
     var header = {
       templateUrl: HeaderTemplate,
-      controller: function($scope) {}
+      controller: "HeaderCtrl as header"
 
     }
      var footer = {
       templateUrl: FooterTemplate,
-      controller: function($scope) {}
+      controller: "FooterCtrl as footer"
 
     }
    $stateProvider
