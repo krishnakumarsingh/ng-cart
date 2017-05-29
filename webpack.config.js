@@ -46,11 +46,11 @@ module.exports = {
 				loader: 'file-loader',
 			}
 		]
- },
+ 	},
 
- devServer: {
-    port: 3000
-  },
+	devServer: {
+		port: 3000
+	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new CleanPlugin(['dist']),

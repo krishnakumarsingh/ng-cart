@@ -1,4 +1,4 @@
-import img from 'file!./image1.jpg'
+import img from './image1.jpg'
 class HomeCtrl {
     constructor($state) {
         this.$state = $state;
