@@ -1,4 +1,4 @@
-
+import "./index.css"
 class HeaderCtrl {
     constructor($state, $http, DataService) {
         this.$state = $state;
