@@ -1,11 +1,10 @@
 import "./index.css"
+import datas from 'json-loader!../../data/navList.json'
 class HeaderCtrl {
     constructor($state, $http, DataService) {
         this.$state = $state;
-        this.message = "DataService.getFullName()";
-        this.data = ["Home", "Shop", "Cart", "Checkout"];
-        this.nav = DataService.getFullName();
-    	this.links = DataService.getFullName().links;
+        this.data = datas;
+    	this.links = datas.links;
     }
 }
 

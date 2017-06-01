@@ -23,3 +23,4 @@ angular.module('angularWebpack', [uirouter])
 	.controller('FooterCtrl', FooterCtrl)
 	.directive("headerDirective", () => new HeaderDirective)
 	.service('DataService', ['$http', () => new DataService]);
+

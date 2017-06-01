@@ -19,6 +19,12 @@ module.exports = {
     },
 	module: {
 		context: __dirname,
+		rules: [
+	      {
+	        test: /\.json$/,
+	        use: 'json-loader'
+	      }
+	    ],
 		loaders: [
 			{
 			    test: /\.js?$/,
