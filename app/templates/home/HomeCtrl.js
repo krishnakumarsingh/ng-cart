@@ -1,5 +1,5 @@
 import img from '../../images/image1.jpg'
-//import './index.css'
+import './index.css'
 //import '../../js/carousel.js'
 class HomeCtrl {
     constructor($state) {
