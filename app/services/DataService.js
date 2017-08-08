@@ -1,7 +1,9 @@
 
 class DataService {
     
-    constructor() {
+    constructor($state, $http) {
+    	this.$state = $state;
+    	this.$http = $http;
         this.mm = {
 				    "projectTitle" : "My Website Title",
 				    "links" : [
@@ -11,9 +13,15 @@ class DataService {
 				        {"name" : "Checkout", "url" : "checkout", "className" : ""}
 				    ]
 				};
+		this.dd = $http.get('http://57c64baac1fc8711008f2a82.mockapi.io/Cart').then(function(res){
+		        	console.log(res.data)
+		        });
+		
     }
     getFullName() {
-        return this.mm;
+        return $http.get('http://57c64baac1fc8711008f2a82.mockapi.io/Cart').then(function(res){
+		        	console.log(res.data)
+		        });
     }
 }
 

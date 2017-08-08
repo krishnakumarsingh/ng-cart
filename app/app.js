@@ -1,4 +1,3 @@
-// Vendors
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
 // Custom
@@ -12,14 +11,20 @@ import { FooterCtrl } from './templates/footer/FooterCtrl';
 
 import { HeaderDirective } from './directives/headerDir';
 import { DataService } from './services/DataService';
+import { dataFactory } from './services/dataFactory';
+(function(angular) {
+  'use strict';
+	// Vendors
 
-angular.module('angularWebpack', [uirouter])
-	.config(Router)
-	.controller('HomeCtrl', HomeCtrl)
-	.controller('AboutCtrl', AboutCtrl)
-	.controller('ShopCtrl', ShopCtrl)
-	.controller('CheckoutCtrl', CheckoutCtrl)
-	.controller('HeaderCtrl', HeaderCtrl)
-	.controller('FooterCtrl', FooterCtrl)
-	.directive("headerDirective", () => new HeaderDirective)
-	.service('DataService', ['$http', () => new DataService]);
+	angular.module('angularWebpack', [uirouter])
+		.config(Router)
+		.controller('HomeCtrl', HomeCtrl)
+		.controller('AboutCtrl', AboutCtrl)
+		.controller('ShopCtrl', ShopCtrl)
+		.controller('CheckoutCtrl', CheckoutCtrl)
+		.controller('HeaderCtrl', HeaderCtrl)
+		.controller('FooterCtrl', FooterCtrl)
+		.factory('dataFactory', ['$http', () => new dataFactory])
+		.directive("headerDirective", () => new HeaderDirective)
+		.service('DataService', ['$http', () => new DataService]);
+})(window.angular);
